@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Shape Demo2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 600px;
+      }
+      img {
+        float: none;
+        display: block;
+      }
+      .shape {
+        float: left;
+        height: 300px;
+        width: auto;
+        shape-image-threshold: 0.5;
+        shape-margin: 1px;
+        shape-outside: url(https://www.chenhuijing.com/assets/images/posts/css-shapes/beyonce.png);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        <img class="shape" src="https://www.chenhuijing.com/assets/images/posts/css-shapes/beyonce.png" alt="beyonce" />
+        To be honest, the W3C spec is not that easy to understand, so here’s my attempt at explaining it in plain
+        English. A prerequisite for applying a CSS shape property to an element is that the element must be floated. It
+        doesn’t work on non-floated elements.
+      </p>
+      <p>
+        If the browser you’re using right now supports CSS shapes, you should see text wrapping nicely around the image
+        of Beyoncé, otherwise you’ll just see the standard rectangular column of text. (Hint: Try using Chrome or
+        Safari)
+      </p>
+      <p>
+        There are 4 basic shape functions you can use to define an element’s shape, in other words, how you want the
+        text to flow around your element. In addition to that, you can also extract a shape from images with an alpha
+        channel.
+      </p>
+    </div>
+  </body>
+</html>

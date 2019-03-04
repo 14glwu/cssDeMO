@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS feature query</title>
+    <style>
+      /* 列选择符 */
+      /* col.selected || td意思就是选择所有属于col.selected的<td>元素，哪怕这个<td>元素横跨多列。 */
+      @supports selector(col.selected || td) {
+        col.selected {
+          background: red;
+        }
+      }
+
+      @supports not selector(col.selected || td) {
+        col.selected {
+          background: red;
+        }
+        .td-G {
+          background: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+      <colgroup>
+        <col span="2" />
+        <col class="selected" />
+      </colgroup>
+      <tbody>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+        </tr>
+        <tr>
+          <td colspan="2">D</td>
+          <td>E</td>
+        </tr>
+        <tr>
+          <td>F</td>
+          <td colspan="2" class="td-G">G</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

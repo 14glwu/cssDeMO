@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Shapes Demo1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 600px;
+      }
+      .circle {
+        width: 250px;
+        height: 250px;
+        background-color: #40a977;
+        border-radius: 50%;
+        float: left;
+        shape-outside: circle();
+        shape-margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle"></div>
+      <p>
+        CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS
+        Shapes测试CSS Shapes测试
+      </p>
+      <p>
+        CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS
+        Shapes测试CSS Shapes测试CSS Shapes测试
+      </p>
+      <p>
+        CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS Shapes测试CSS
+        Shapes测试CSS Shapes测试CSS Shapes测试CSS Shapes测试
+      </p>
+    </div>
+  </body>
+</html>

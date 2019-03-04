@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Variables Demo1</title>
+    <style>
+      :root {
+        --theme-colour: cornflowerblue;
+      }
+      h1 {
+        color: var(--theme-colour);
+      }
+      a {
+        color: var(--theme-colour);
+      }
+      p {
+        color: var(--theme-colour);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      这是h1标题
+    </h1>
+    <a href="">这是a链接</a>
+    <p>这是p段落</p>
+    <input type="color" id="colorSelector" />
+    <button id="changeColorBtn">换色</button>
+    <script>
+      const changeColorBtn = document.getElementById('changeColorBtn');
+      changeColorBtn.addEventListener('click', handleClick);
+      function handleClick() {
+        const rootEl = document.documentElement;
+        const colorSelector = document.getElementById('colorSelector');
+        rootEl.style.setProperty('--theme-colour', colorSelector.value);
+      }
+    </script>
+  </body>
+</html>
